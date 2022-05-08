@@ -52,8 +52,8 @@ void printlcs(char* X,char* Y,int n,int m)
 
 int main()
 {
-     char X[] = "ABCDE";
-    char Y[] = "ABCTX";
+     char X[] = "AGGTAB";
+    char Y[] = "GXTXAYB";
      
     int n= strlen(X);
     int m = strlen(Y);
