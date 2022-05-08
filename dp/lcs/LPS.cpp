@@ -1,15 +1,12 @@
-//count the minimum number of insertion and deletion 
-//required to convert string a to b
+//Longest palimdromic subsequence
+
 
 #include<bits/stdc++.h>
 using namespace std;
 int dp[10][10];
-
-void insertanddelete(char* X,char* Y,int n,int m)
+int LCS(string X,string Y,int n,int m)
 {
-
-    //lcs
-     for (int i = 0; i < n+1; i++)
+    for (int i = 0; i < n+1; i++)
     {
         for (int  j = 0; j < m+1; j++)
         {
@@ -27,20 +24,18 @@ void insertanddelete(char* X,char* Y,int n,int m)
         }
         
     }
-
-
-    int x = dp[n][m];
-    cout<<"insertion "<<m-x<<" deletion "<<n-x<<endl;
+    return dp[n][m];
 }
-
 int main()
 {
-     char X[] = "SUB";
-    char Y[] = "SUM";
+    string a = "AGBCBA";
+    string x =a;
+     reverse(x.begin(),x.end());
+     string b=x;
      
-    int n= strlen(X);
-    int m = strlen(Y);
+    int n= 6;
+    int m = 6;
    
-    insertanddelete(X,Y,n,m);
+    cout<<LCS(a,b,n,m);
 
 }
