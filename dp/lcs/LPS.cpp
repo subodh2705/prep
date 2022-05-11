@@ -28,7 +28,7 @@ int LCS(string X,string Y,int n,int m)
 }
 int main()
 {
-    string a = "AGBCBA";
+    string a = "banana";
     string x =a;
      reverse(x.begin(),x.end());
      string b=x;
